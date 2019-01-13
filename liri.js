@@ -13,7 +13,7 @@ var song = "";
 var movie = "";
 var bandartistname = "";
 
-function spotifyThisSong() {
+function spotifyThisSong(song) {
     spotify.search({ type: 'track', query: song, limit: 1},function(error,data) {
         if (error) {
             return console.log("Error occurred: " + error);
@@ -23,7 +23,7 @@ function spotifyThisSong() {
     })
 }
 
-function movieThis() {
+function movieThis(movie) {
     var queryUrl = "http://www.omdbapi.com/?t=" + movie + "&y=&plot=short&apikey=" +omdb;
 
     axios.get(queryUrl).then(function(response){
@@ -32,9 +32,10 @@ function movieThis() {
     });
 };
 
-function concertThis() {
+function concertThis(bandartistname) {
     var queryUrl = "https://rest.bandsintown.com/artists/" + bandartistname + "/events?app_id=" + bands;
     axios.get(queryUrl).then(function(response){
+        console.log(response.data.length);
         for (var j=0; j<response.data.length; j++) {
             var date = moment(response.data[j].datetime, "YYYY-MM-DDTHH:mm:ss").format("MM/DD/YYYY");
             console.log("Name of Venue: " + response.data[j].venue.name, "\nVenue Location: "+response.data[j].venue.city+ ", "+response.data[j].venue.country, "\nDate of Event: "+date);
@@ -60,7 +61,7 @@ if (nodeArgs[2] === "spotify-this-song") {
     else {
         song = "The Sign Ace of Base";   
     }
-    spotifyThisSong();
+    spotifyThisSong(song);
     
 }
 else if (nodeArgs[2]==="movie-this") {
@@ -78,7 +79,7 @@ else if (nodeArgs[2]==="movie-this") {
     else {
         movie = "Mr.+Nobody";
     }
-    movieThis();
+    movieThis(movie);
     
 }
 else if (nodeArgs[2]==="concert-this") {
@@ -91,7 +92,7 @@ else if (nodeArgs[2]==="concert-this") {
             bandartistname += nodeArgs[i];
         }
     }
-    concertThis();
+    concertThis(bandartistname);
     
 }
 else if (nodeArgs[2]==="do-what-it-says") {
@@ -104,15 +105,21 @@ else if (nodeArgs[2]==="do-what-it-says") {
             var dataArr = data.split(",");
             if (dataArr[0]==="spotify-this-song") {
                 song = dataArr[1];
-                spotifyThisSong();
+                spotifyThisSong(song);
             }
             else if (dataArr[0]==="movie-this") {
                 movie = dataArr[1].split(" ").join("+");
-                movieThis();
+                movieThis(movie);
             }
             else if (dataArr[0]==="concert-this") {
-                bandartistname = dataArr[1].split(" ").join("+");
-                concertThis();
+                if (dataArr[1].split(" ").length>=2) {
+                    bandartistname = dataArr[1].split(" ").join("+").replace(/["]+/g,"");
+                }
+                else {
+                    bandartistname += dataArr[1].replace(/["]+/g,"");
+                }
+                
+                concertThis(bandartistname);
             }
         };
         
