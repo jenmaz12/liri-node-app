@@ -5,6 +5,7 @@ If the command is "spotify-this-song" and then a song name, the application make
 ![Video of spotify-this-song command](/Gifs/spotify-this-song.gif)
 
 If the command is "movie-this" and a movie name, the application uses the axios Node package to make a request to the OMDB API and return title, release year, IMDb rating, Rotten Tomatoes rating, country where it was produced, language, plot, and actors. If the user does not enter a movie name, the application will default to "Mr. Nobody."
+![Video of movie-this command](/Gifs/movie-this.gif)
 
 If the command is "concert-this" and a band or artist, the application uses the axios Node package to make a request to the Bands in Town API and return the following information for each of the band's events in the coming year: name of venue, venue city and country, and date of the event.
 
