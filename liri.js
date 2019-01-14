@@ -19,16 +19,25 @@ function spotifyThisSong(song) {
             return console.log("Error occurred: " + error);
         }
         // console.log(data.tracks.items[0]);
-        console.log("Artist Name: "+ data.tracks.items[0].artists[0].name, "\nSong Name: " + data.tracks.items[0].name, "\nPreview URL: " + data.tracks.items[0].preview_url, "\nAlbum Name: "+data.tracks.items[0].album.name);
-    })
-}
+        var songData = "Artist Name: "+ data.tracks.items[0].artists[0].name + "\nSong Name: " + data.tracks.items[0].name+ "\nPreview URL: " + data.tracks.items[0].preview_url + "\nAlbum Name: "+data.tracks.items[0].album.name;
+        console.log(songData);
+        fs.appendFile("log.txt", "\n-------------\n" + songData, function(err){
+            if (err) throw err;
+            console.log("Song data was appended to log.txt!");
+        });
+    });
+};
 
 function movieThis(movie) {
     var queryUrl = "http://www.omdbapi.com/?t=" + movie + "&y=&plot=short&apikey=" +omdb;
 
     axios.get(queryUrl).then(function(response){
-        console.log("Title: " + response.data.Title,"\nReleased: " + response.data.Year,"\nIMDb Rating: " + response.data.Ratings[0].Value, "\nRotten Tomatoes Rating: " + response.data.Ratings[1].Value, "\nProduced in: " + response.data.Country, "\nLanguage: " + response.data.Language, "\nPlot: " + response.data.Plot, "\nActors: " + response.data.Actors);
-        
+        var movieData = "Title: " + response.data.Title + "\nReleased: " + response.data.Year + "\nIMDb Rating: " + response.data.Ratings[0].Value + "\nRotten Tomatoes Rating: " + response.data.Ratings[1].Value + "\nProduced in: " + response.data.Country + "\nLanguage: " + response.data.Language + "\nPlot: " + response.data.Plot + "\nActors: " + response.data.Actors;
+        console.log(movieData);
+        fs.appendFile("log.txt", "\n-------------\n" + movieData, function(err){
+            if (err) throw err;
+            console.log("Movie data was appended to log.txt!");
+        });        
     });
 };
 
@@ -38,10 +47,14 @@ function concertThis(bandartistname) {
         console.log(response.data.length);
         for (var j=0; j<response.data.length; j++) {
             var date = moment(response.data[j].datetime, "YYYY-MM-DDTHH:mm:ss").format("MM/DD/YYYY");
-            console.log("Name of Venue: " + response.data[j].venue.name, "\nVenue Location: "+response.data[j].venue.city+ ", "+response.data[j].venue.country, "\nDate of Event: "+date);
+            var concertData = "Name of Venue: " + response.data[j].venue.name + "\nVenue Location: "+response.data[j].venue.city+ ", "+response.data[j].venue.country + "\nDate of Event: "+date;
+            console.log(concertData);
             console.log("\n---------------\n");
+            fs.appendFile("log.txt", "\n-------------\n" + "Band Name: " + bandartistname.replace("+", " ") + "\n" + concertData, function(err){
+                if (err) throw err;
+            }); 
         };
-        
+        console.log("Concert data was appended to log.txt!");   
     });
 };
 
