@@ -3,7 +3,7 @@ LIRI Bot is a Node.js application in which the user can enter one of four comman
 
 If the command is "spotify-this-song" and then a song name, the application makes a request to the Spotify API and returns the song artist, song name, a preview URL, and the album name. If the user does not enter a song name, then the application will default to "The Sign" by Ace of Base.
 ![Video of spotify-this-song command]
-(Gifs/spotify-this-song.mp4)
+(/Gifs/spotify-this-song.mp4)
 
 If the command is "movie-this" and a movie name, the application uses the axios Node package to make a request to the OMDB API and return title, release year, IMDb rating, Rotten Tomatoes rating, country where it was produced, language, plot, and actors. If the user does not enter a movie name, the application will default to "Mr. Nobody."
 
