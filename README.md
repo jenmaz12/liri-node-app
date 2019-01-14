@@ -8,5 +8,7 @@ If the command is "movie-this" and a movie name, the application uses the axios 
 ![Video of movie-this command](/Gifs/movie-this.gif)
 
 If the command is "concert-this" and a band or artist, the application uses the axios Node package to make a request to the Bands in Town API and return the following information for each of the band's events in the coming year: name of venue, venue city and country, and date of the event.
+![Video of concert-this command](/Gifs/concert-this.gif)
 
 For the "do-what-it-says" command, the application reads the random.txt file, separates the command from the song/movie/band name by splitting at the comma, and executes the correct command.
+![Video of do-what-it-says command](/Gifs/do-what-it-says.gif)
