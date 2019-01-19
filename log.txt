@@ -4,3 +4,98 @@ Artist Name: Ace of Base
 Song Name: The Sign
 Preview URL: https://p.scdn.co/mp3-preview/4c463359f67dd3546db7294d236dd0ae991882ff?cid=db0dd130c19f40449aad6b62b3e253ca
 Album Name: The Sign (US Album) [Remastered]
+-------------
+Artist Name: Ace of Base
+Song Name: The Sign
+Preview URL: https://p.scdn.co/mp3-preview/4c463359f67dd3546db7294d236dd0ae991882ff?cid=db0dd130c19f40449aad6b62b3e253ca
+Album Name: The Sign (US Album) [Remastered]
+-------------
+Artist Name: Lil Wayne
+Song Name: Mirror
+Preview URL: null
+Album Name: Tha Carter IV (Deluxe)
+-------------
+Artist Name: Lil Wayne
+Song Name: Mirror
+Preview URL: null
+Album Name: Tha Carter IV (Deluxe)
+-------------
+Band Name: Maroon 5
+Name of Venue: Brisbane Entertainment Centre
+Venue Location: Brisbane, Australia
+Date of Event: 02/19/2019
+-------------
+Band Name: Maroon 5
+Name of Venue: Qudos Bank Arena
+Venue Location: Sydney, Australia
+Date of Event: 02/21/2019
+-------------
+Band Name: Maroon 5
+Name of Venue: Rod Laver Arena
+Venue Location: Melbourne, Australia
+Date of Event: 02/22/2019
+-------------
+Band Name: Maroon 5
+Name of Venue: Tokyo Dome
+Venue Location: Tokyo, Japan
+Date of Event: 02/25/2019
+-------------
+Band Name: Maroon 5
+Name of Venue: Gocheok Sky Dome
+Venue Location: Seoul, South Korea
+Date of Event: 02/27/2019
+-------------
+Band Name: Maroon 5
+Name of Venue: TBA
+Venue Location: Kaohsiung City, Taiwan
+Date of Event: 03/01/2019
+-------------
+Band Name: Maroon 5
+Name of Venue: TBA
+Venue Location: Macau, Macau
+Date of Event: 03/03/2019
+-------------
+Band Name: Maroon 5
+Name of Venue: SM Mall Of Asia
+Venue Location: Manila, Philippines
+Date of Event: 03/05/2019
+-------------
+Band Name: Maroon 5
+Name of Venue: NATIONAL STADIUM
+Venue Location: Singapore, Singapore
+Date of Event: 03/07/2019
+-------------
+Band Name: Maroon 5
+Name of Venue: CHALLENGER HALL
+Venue Location: Bangkok, Thailand
+Date of Event: 03/09/2019
+-------------
+Band Name: Maroon 5
+Name of Venue: Mollenpark
+Venue Location: Aalborg, Denmark
+Date of Event: 06/01/2019
+-------------
+Band Name: Maroon 5
+Name of Venue: Lanxess Arena
+Venue Location: Cologne, Germany
+Date of Event: 06/03/2019
+-------------
+Band Name: Maroon 5
+Name of Venue: O2 ARENA
+Venue Location: Prague, Czech Republic
+Date of Event: 06/05/2019
+-------------
+Band Name: Maroon 5
+Name of Venue: Tauron Arena
+Venue Location: Kraków, Poland
+Date of Event: 06/06/2019
+-------------
+Band Name: Maroon 5
+Name of Venue: Ziggo Dome
+Venue Location: Amsterdam, Netherlands
+Date of Event: 06/10/2019
+-------------
+Band Name: Maroon 5
+Name of Venue: AccorHotels Arena
+Venue Location: Paris, France
+Date of Event: 06/11/2019

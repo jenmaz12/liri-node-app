@@ -56,13 +56,13 @@ function concertThis(bandartistname) {
 };
 
 function init() {
-    let song;
-    let movie;
-    let bandartistname;
+    let song = "";
+    let movie = "";
+    let bandartistname = "";
     if (nodeArgs[2] === "spotify-this-song") {
         if (nodeArgs.length > 3) {
+            
             for (let i = 3; i < nodeArgs.length; i++) {
-    
                 if (i > 3 && i < nodeArgs.length) {
                     song = song + " " + nodeArgs[i];
                 }
@@ -141,4 +141,4 @@ function init() {
     };
 }
 
-init()
+init();
